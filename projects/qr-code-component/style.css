@@ -13,8 +13,8 @@ body {
 }
 
 .card {
-  --card-width: 300px;
-  --card-height: 480px;
+  --card-width: 310px;
+  --card-height: 490px;
   width: var(--card-width);
   height: var(--card-height);
   background-color: hsl(0, 0%, 100%);
@@ -41,4 +41,5 @@ h1 {
 p {
   font-size: 15px;
   color: hsl(220, 15%, 55%);
+  padding: 0 10px;
 }
