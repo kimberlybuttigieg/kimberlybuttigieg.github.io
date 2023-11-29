@@ -1,0 +1,298 @@
+/* Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline-color: black;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Header */
+header {
+  height: 60px;
+}
+
+nav {
+  height: 100%;
+  width: 100%;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-link {
+  font-size: 13px;
+  color: rgba(0,0,0, 0.87);
+  margin-left: 15px;
+  padding: 4px 0;
+}
+
+.navbar-link::after {
+  content: '';
+  display: block;
+  height: 3px;
+  margin-left: 15px;
+}
+
+.apps-button {
+  fill: #5f6368;
+  margin-left: 19px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apps-button:focus {
+  outline: 1px solid black;
+}
+
+.apps-button:hover {
+  background-color: #ebecec;
+}
+
+.apps-item[data-title]:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  font-size: 12px;
+  padding: 4px 8px;
+  background-color: rgba(60, 64, 67, 0.9);
+  border-radius: 4px;
+  color: white;
+  margin-top: 2px;
+}
+
+.login-button {
+  background-color: #1a73e8;
+  color: white;
+  width: 96px;
+  height: 36px;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin: 0 18px 0 12px;
+  line-height: 200%;
+  font-size: 13.5px;
+}
+
+.login-button:hover,
+.login-button:focus {
+  background-color: #1c5fba;
+  box-shadow: 0 2px #bcbdbe;
+  outline: none;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main img {
+  height: 92px;
+  width: 272px;
+  margin-bottom: 26px;
+}
+
+#search-bar {
+  height: 48px;
+  width: 92.3%;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  max-width: 585px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  fill: #9aa0a6;
+  margin: 0 13px 1px 13px;
+  width: 33px;
+}
+
+.search-icon path:first-of-type {
+  fill: none;
+}
+
+textarea {
+  resize: none;
+  height: 70%;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-bottom: -13px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+#search-bar button:focus {
+  outline: none;
+}
+
+.mic-icon {
+  margin-left: 10px;
+}
+
+.mic-icon path:first-of-type {
+  fill: #4285f4;
+}
+
+.mic-icon path:nth-of-type(2) {
+  fill: #34a853;
+}
+
+.mic-icon path:nth-of-type(3) {
+  fill: #fbbc05;
+}
+
+.mic-icon path:nth-of-type(4) {
+  fill: #ea4335;
+}
+
+.searchbar-button {
+  width: 24px;
+  margin-right: 16px;
+}
+
+.cam-icon circle:first-of-type {
+  fill: #34a853;
+}
+
+.cam-icon circle:nth-of-type(2) {
+  fill: #4285f4;
+}
+
+.cam-icon path:first-of-type {
+  fill: #ea4335;
+}
+
+.cam-icon path:nth-of-type(2) {
+  fill: #fbbc05;
+}
+
+.cam-icon path:nth-of-type(3) {
+  fill: #4285f4;
+}
+
+.search-button {
+  font-size: 14px;
+  background-color: rgb(248, 249, 250);
+  border-radius: 4px;
+  margin: 27px 3px 26.5px 3px;
+  padding: 10px 17px;
+  border: 1px solid white;
+  box-shadow: 0 2px white;
+}
+
+.search-button:hover {
+  box-shadow: 0 2px #bcbdbe;
+  border-color: #d3d3d4;
+}
+
+.search-button:focus {
+  outline: 1px solid #4285f4;
+}
+
+.language {
+  color: #4d5156;
+  font-size: 13px;
+}
+
+.language a {
+  color: #1a0dab;
+  padding: 2px;
+}
+
+/* Footer */
+footer {
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #70757a;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footer-top {
+  border-bottom: 1px solid rgb(218, 220, 224);
+  padding: 15.5px 0 14.5px 30px;
+  font-size: 14.5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom ul {
+  display: flex;
+}
+
+.footer-left a {
+  padding: 15px 15px;
+}
+
+.footer-right a {
+  padding: 15px 13px;
+}
+
+.footer-left {
+  padding: 15px calc(30% - 192px) 15px 20.25px;
+}
+
+.footer-right {
+  padding: 15px 21px 15px 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer-right {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 685px) {
+  .footer-bottom {
+    flex-wrap: wrap;
+  }
+  .footer-left {
+    padding: 15px 0px;
+  }
+  .footer-right {
+    padding: 15px 0px;
+  }
+}
