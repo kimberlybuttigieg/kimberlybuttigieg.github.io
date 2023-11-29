@@ -1,0 +1,105 @@
+body {
+  background-color: hsl(216, 12%, 8%);
+  margin: 0;
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  color: hsl(217, 12%, 63%);
+  line-height: 1.5;
+}
+
+main {
+  --main-height: 375px;
+  --main-width: 400px;
+  height: var(--main-height);
+  width: var(--main-width);
+  background: radial-gradient(circle at top, hsl(213, 19%, 18%), rgb(20, 30, 40));
+  margin-top: calc(50vh - var(--main-height) / 2);
+  margin-left: calc(50vw - var(--main-width) / 2);
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.circle {
+  background-color: hsl(213, 19%, 18%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#pane-rating h1 {
+  color: white;
+  font-weight: 700;
+  margin: 20px 0 15px 0;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.ranking {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+
+.focus {
+  background-color: hsl(216, 12%, 54%);
+  color: white;
+}
+
+.rating {
+  cursor: pointer;
+}
+
+.rating:hover:not(.focus) {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.submit {
+  text-transform: uppercase;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit:hover, .submit:focus {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
+
+#pane-success {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+
+#pane-success img {
+  width: 200px;
+}
+
+.final {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin-top: 20px;
+  color: hsl(25, 97%, 53%);
+}
+
+#pane-success h1 {
+  margin: 0;
+}
