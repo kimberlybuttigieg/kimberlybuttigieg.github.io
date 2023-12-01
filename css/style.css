@@ -3,5 +3,10 @@ header {
 }
 
 .card {
-  width: 18rem;
+  width: 14rem;
+}
+
+.card img {
+  height: 150px;
+  object-fit: cover;
 }
