@@ -10,3 +10,20 @@ header {
   height: 150px;
   object-fit: cover;
 }
+
+.bg-accent {
+  background-color: rgb(213, 162, 213);
+}
+
+.bg-dark {
+  background-color: rgb(36, 36, 36)!important;
+}
+
+.bg-dark a:not(.btn) {
+  color: rgb(154, 154, 255);
+}
+
+#contact img {
+  width: 2rem;
+  height: 2rem;
+}
