@@ -102,10 +102,11 @@ const updateData = (lon, lat) => {
 const searchBar = document.getElementById('searchBar');
 const searchButton = document.querySelectorAll('.search');
 for (let i = 0; i < searchButton.length; i++) {
-  searchButton[i].addEventListener(
-    'click',
-    search(encodeURIComponent(searchBar.value))
-  );
+  searchButton[i].addEventListener('click', () => {
+    if (searchBar.value) {
+      search(encodeURIComponent(searchBar.value));
+    }
+  });
 }
 searchBar.addEventListener('keydown', (e) => {
   if (e.key == 'Enter' && searchBar.value) {
