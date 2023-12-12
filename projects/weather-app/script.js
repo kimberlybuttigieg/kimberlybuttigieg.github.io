@@ -39,7 +39,6 @@ const updateData = (lon, lat) => {
       const windSpeed = JSON.parse(request.response).current.wind_speed_10m;
       const isDay = JSON.parse(request.response).current.is_day;
 
-      console.log(JSON.parse(request.response).current.weather_code);
       var symbol;
       switch (JSON.parse(request.response).current.weather_code) {
         case 0:
