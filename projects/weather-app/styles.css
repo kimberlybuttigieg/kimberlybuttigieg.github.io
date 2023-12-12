@@ -50,6 +50,7 @@ input {
 
 button {
   width: 2rem;
+  cursor: pointer;
 }
 
 button:hover, button:focus {
