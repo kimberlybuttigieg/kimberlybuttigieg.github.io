@@ -103,3 +103,8 @@ p {
 #pane-success h1 {
   margin: 0;
 }
+
+.attribution {
+  text-align: center;
+  padding-top: 0.5rem;
+}
