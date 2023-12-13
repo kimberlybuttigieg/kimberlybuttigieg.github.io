@@ -12,6 +12,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .card {
@@ -128,4 +129,12 @@ p {
 
 .bi-wind {
   padding-left: 1.5rem
+}
+
+.attribution {
+  padding-top: 0.5rem;
+}
+
+a {
+  color: lightblue;
 }
