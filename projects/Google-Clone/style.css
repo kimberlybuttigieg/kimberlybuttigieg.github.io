@@ -116,6 +116,10 @@ nav ul {
   outline: none;
 }
 
+.login-button a:hover {
+  text-decoration: none !important;
+}
+
 /* Main */
 main {
   display: flex;
