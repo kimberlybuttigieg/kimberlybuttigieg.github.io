@@ -145,3 +145,8 @@ body {
 .winning-message.show {
   display: flex;
 }
+
+.attribution {
+  text-align: center;
+  margin-top: -8rem;
+}
