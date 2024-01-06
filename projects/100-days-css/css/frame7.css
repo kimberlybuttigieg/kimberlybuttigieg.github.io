@@ -1,0 +1,229 @@
+#frame7 {
+  background: #264057;
+  color: #666666;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  overflow: hidden;
+}
+#frame7 .panel {
+  position: absolute;
+  z-index: 2;
+  height: 300px;
+  width: 300px;
+  top: 50px;
+  left: 50px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in-out;
+}
+#frame7 .panel.show-menu {
+  transform: translate3d(150px, 0, 0);
+}
+#frame7 .panel .header {
+  height: 60px;
+  width: 100%;
+  background: #5f98cd;
+}
+#frame7 .panel .header .menu-icon {
+  position: absolute;
+  width: 29px;
+  height: 15px;
+  top: 23px;
+  left: 20px;
+  cursor: pointer;
+}
+#frame7 .panel .header .menu-icon:hover .dash-top,
+#frame7 .panel .header .menu-icon:hover .dash-bottom,
+#frame7 .panel .header .menu-icon:hover .circle {
+  background: #fff;
+}
+#frame7 .panel .header .menu-icon .dash-top, #frame7 .panel .header .menu-icon .dash-bottom {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #b2daff;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+#frame7 .panel .header .menu-icon .dash-bottom {
+  width: 29px;
+  top: auto;
+  bottom: 0;
+}
+#frame7 .panel .header .menu-icon .circle {
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border-radius: 4px;
+  top: -2px;
+  right: 0;
+  background: #b2daff;
+  transition: all 0.2s ease-in-out;
+}
+#frame7 .panel .header .title {
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+}
+#frame7 .panel .header .search-input {
+  box-sizing: border-box;
+  position: absolute;
+  top: 13px;
+  right: 55px;
+  width: 230px;
+  height: 34px;
+  border-radius: 17px;
+  border: none;
+  background: #fff;
+  padding: 0 17px;
+  font-size: 13px;
+  color: #666;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(15px);
+  opacity: 0;
+  pointer-events: none;
+}
+#frame7 .panel .header .search-input:focus {
+  outline: none;
+}
+#frame7 .panel .header .search-input.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+#frame7 .panel .header .search-icon {
+  position: absolute;
+  z-index: 2;
+  font-size: 21px;
+  color: #b2daff;
+  top: 18px;
+  right: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#frame7 .panel .header .search-icon:hover {
+  color: #fff;
+}
+#frame7 .panel .notifications {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+#frame7 .panel .notifications .line {
+  position: absolute;
+  top: 0;
+  left: 27px;
+  bottom: 0;
+  width: 3px;
+  background: #ebebeb;
+}
+#frame7 .panel .notifications .notification {
+  position: relative;
+  z-index: 2;
+  margin: 25px 20px 25px 43px;
+}
+#frame7 .panel .notifications .notification:nth-child(2) {
+  animation: here-am-i 0.5s ease-out 0.4s;
+  animation-fill-mode: both;
+}
+#frame7 .panel .notifications .notification:nth-child(3) {
+  animation: here-am-i 0.5s ease-out 0.6s;
+  animation-fill-mode: both;
+}
+#frame7 .panel .notifications .notification:nth-child(4) {
+  animation: here-am-i 0.5s ease-out 0.8s;
+  animation-fill-mode: both;
+}
+#frame7 .panel .notifications .notification:hover {
+  color: #5f98cd;
+  cursor: pointer;
+}
+#frame7 .panel .notifications .notification .circle {
+  box-sizing: border-box;
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background: #fff;
+  border: 2px solid #5f98cd;
+  box-shadow: 0 0 0 3px #fff;
+  border-radius: 6px;
+  top: 0;
+  left: -20px;
+}
+#frame7 .panel .notifications .notification .time {
+  display: block;
+  font-size: 11px;
+  line-height: 11px;
+  margin-bottom: 2px;
+}
+#frame7 .panel .notifications .notification p {
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+}
+#frame7 .panel .notifications .notification p b {
+  font-weight: 600;
+}
+#frame7 .menu {
+  position: absolute;
+  width: 170px;
+  height: 270px;
+  top: 65px;
+  left: 50px;
+  background: #43627d;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(20px, 0, 0);
+}
+#frame7 .menu.active {
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, 0, 0);
+}
+#frame7 .menu ul {
+  margin: 0;
+  padding: 10px 0;
+}
+#frame7 .menu li {
+  color: #93b2cd;
+  margin: 0;
+  padding: 18px 17px;
+  list-style: none;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#frame7 .menu li:hover {
+  color: #fff;
+  background: #385269;
+}
+#frame7 .menu li span {
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-top: -1px;
+}
+#frame7 .menu li .fa-gear,
+#frame7 .menu li .fa-user,
+#frame7 .menu li .fa-bell {
+  margin-top: 0;
+}
+
+@keyframes here-am-i {
+  from {
+    transform: translate3d(0, 50px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=frame7.css.map */
