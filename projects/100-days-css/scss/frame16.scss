@@ -1,0 +1,14 @@
+#frame16 {
+  background: #46a6da;
+
+  .circle {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 155px;
+    left: 155px;
+    background: #fff;
+    border-radius: 50%;
+    animation: circle 5s ease-in-out infinite;
+  }
+}
