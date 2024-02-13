@@ -2,7 +2,8 @@ body {
   width: 98.5vw;
 }
 
-header {
+header,
+footer {
   background-color: #838a94;
   font-family: 'Archivo Black', 'Roboto', 'Arial', sans-serif;
   letter-spacing: 0.04rem;
@@ -16,7 +17,7 @@ ul {
   list-style: none;
 }
 
-#home {
+main {
   background-color: black;
 }
 
@@ -28,4 +29,13 @@ main img:not(.img-fluid) {
 a .card-title:hover,
 a .card-title:focus {
   text-decoration: underline;
+}
+
+.img-fluid {
+  height: 7rem;
+  width: 7rem;
+}
+
+footer img {
+  height: 2rem;
 }
