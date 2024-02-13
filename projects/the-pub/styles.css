@@ -1,5 +1,6 @@
 body {
   width: 98.5vw;
+  min-height: 100vh;
 }
 
 header,
@@ -21,7 +22,7 @@ main {
   background-color: black;
 }
 
-main img:not(.img-fluid) {
+#home img {
   height: 20rem;
   object-fit: cover;
 }
@@ -38,4 +39,24 @@ a .card-title:focus {
 
 footer img {
   height: 2rem;
+}
+
+.card {
+  height: 12rem;
+  width: calc(10rem + 15vw);
+}
+
+.text-bg-dark {
+  background-color: black !important;
+}
+
+#about img {
+  width: 10rem;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+main a:hover,
+main a:focus {
+  text-decoration: underline;
 }
