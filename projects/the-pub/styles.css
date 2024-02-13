@@ -1,0 +1,31 @@
+body {
+  width: 98.5vw;
+}
+
+header {
+  background-color: #838a94;
+  font-family: 'Archivo Black', 'Roboto', 'Arial', sans-serif;
+  letter-spacing: 0.04rem;
+}
+
+header img {
+  height: 5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+#home {
+  background-color: black;
+}
+
+main img:not(.img-fluid) {
+  height: 20rem;
+  object-fit: cover;
+}
+
+a .card-title:hover,
+a .card-title:focus {
+  text-decoration: underline;
+}
