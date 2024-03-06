@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   width: 100%;
@@ -7,14 +11,23 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
 }
 
 .frame {
   background-color: white;
-  width: 375px;
+  width: 100%;
+  max-width: 400px;
   padding: 1rem;
-  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 420px) {
+  body {
+    padding: 2rem 0;
+  }
+
+  .frame {
+    border-radius: 0.5rem;
+  }
 }
 
 img {
