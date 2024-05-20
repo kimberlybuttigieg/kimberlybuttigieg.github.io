@@ -1,0 +1,98 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("../assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("../assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: hsl(275, 100%, 97%);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  font-family: "Work Sans", sans-serif;
+  margin: 3rem 0;
+}
+
+.title {
+  display: inline-flex;
+}
+
+.title img {
+  padding-right: 2rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.accordion {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  border: none;
+  background-color: white;
+  font-size: 1.3rem;
+  padding: 0;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  margin: 1rem 0;
+  transition: 0.4s;
+  cursor: pointer;
+  justify-content: start;
+  width: 100%;
+}
+
+.accordion:hover,
+.accordion:focus {
+  color: #ad28eb;
+}
+
+.accordion:after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../assets/images/icon-plus.svg);
+  margin-left: auto;
+}
+
+.active:after {
+  background-image: url("../assets/images/icon-minus.svg");
+}
+
+.panel {
+  color: hsl(292, 16%, 49%);
+  font-size: 0.9rem;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+hr {
+  margin: 1rem 0;
+  opacity: 50%;
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    background-image: url("../assets/images/background-pattern-desktop.svg");
+  }
+}
