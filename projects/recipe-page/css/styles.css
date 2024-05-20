@@ -1,120 +1,202 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  width: 100%;
-  min-height: 100%;
-  background-color: hsl(30, 18%, 87%);
+  width: 100vw;
   display: flex;
-  justify-content: center;
+  background-color: hsl(30, 54%, 90%);
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
-.frame {
+.container {
   background-color: white;
-  width: 100%;
-  max-width: 400px;
-  padding: 1rem;
-}
-
-@media screen and (min-width: 420px) {
-  body {
-    padding: 2rem 0;
-  }
-
-  .frame {
-    border-radius: 0.5rem;
-  }
+  min-height: 100vh;
+  color: hsl(24, 5%, 18%);
 }
 
 img {
-  border-radius: 0.5rem
+  width: 100%;
 }
 
-h1, h2 {
-  font-family: "Young Serif", "Times New Roman", serif;
+.textbox {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+p,
+li,
+h2,
+td {
   font-weight: 400;
-  margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
 }
 
 h1 {
-  font-size: 25px;
+  margin: 0;
+  font-size: 1.75rem;
 }
 
-p, li, table {
-  color: hsl(30, 10%, 34%);
-  font-family: Outfit, Arial, sans-serif;
-  font-size: 12px;
+p,
+h3,
+li,
+td {
+  font-family: "Outfit", sans-serif;
+}
+
+p {
+  font-size: 0.85rem;
+  line-height: 140%;
 }
 
 .prep {
   background-color: hsl(330, 100%, 98%);
+  padding: 1rem 1rem 0.25rem 1rem;
   border-radius: 0.5rem;
-  padding: 1rem 0 0.1rem 1rem;
 }
 
 h3 {
   margin: 0;
   color: hsl(332, 51%, 32%);
+  font-size: 1rem;
 }
 
-ul, ol {
-  padding-left: 1.5rem;
+ul {
+  padding: 0;
+  margin: 0.5rem;
 }
 
-li {
-  padding-left: 0.5rem;
-  color: hsl(30, 10%, 34%);
-  padding-bottom: 0.6rem;
+ul li {
+  color: hsl(24, 5%, 18%);
+  font-size: 0.8rem;
+  line-height: 200%;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-ul li::marker {
-  font-size: 10px;
+ul li::before {
+  content: "•";
+  color: hsl(14, 45%, 36%);
+  padding-right: 1rem;
+  font-size: 180%;
 }
 
-li::marker {
+ul li b {
+  margin-bottom: auto;
+}
+
+.prep li::before {
   color: hsl(332, 51%, 32%);
-}
-
-ol li::marker {
-  font-weight: bold
 }
 
 h2 {
   color: hsl(14, 45%, 36%);
-  font-size: 19px;
 }
 
 hr {
-  border: 1px solid hsl(30, 18%, 87%);
-  border-radius: 1rem
-}
-
-th {
-  color: hsl(14, 45%, 36%);
-}
-
-table {
+  border-color: hsl(24, 5%, 18%);
+  opacity: 30%;
   width: 100%;
+}
+
+ol {
+  padding: 0 0 0 1rem;
+  margin: 0.5rem;
+}
+
+ol li::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+}
+
+ol li {
+  padding-left: 1rem;
+  line-height: 150%;
+}
+
+h2 {
+  margin: 0.5rem 0;
+}
+
+table,
+td {
   border-collapse: collapse;
 }
 
-td:not(tr:last-of-type td),
-th:not(tr:last-of-type th) {
-  border-bottom: 1px solid hsl(30, 18%, 87%);
+td {
+  padding: 0.5rem 0;
 }
 
-td, th {
-  padding: 0.5rem 0 0.5rem 1.5rem;
+td:first-of-type {
+  padding-left: 1rem;
 }
 
-th {
-  text-align: left;
+td:last-of-type {
+  font-weight: 700;
+  color: hsl(14, 45%, 36%);
+}
+
+tr:not(tr:last-of-type) td {
+  border-bottom: 1px solid hsla(24, 5%, 18%, 40%);
 }
 
 .attribution {
-  display: block;
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 0.5rem;
+}
+
+.desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 375px) {
+  .container {
+    padding: 2rem;
+    width: 30rem;
+    margin: 3rem 0.5rem 0.5rem 0.5rem;
+    min-height: 0;
+    border-radius: 0.5rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .textbox {
+    padding: 0;
+  }
+
+  .attribution {
+    margin-bottom: 1rem;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
