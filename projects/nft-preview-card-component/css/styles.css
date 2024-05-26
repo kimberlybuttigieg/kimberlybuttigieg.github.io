@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(217, 54%, 11%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  width: 18rem;
+  height: 30rem;
+  border-radius: 1rem;
+  padding: 1.4rem;
+  font-family: Outfit, sans-serif;
+  color: white;
+}
+
+.preview {
+  position: relative;
+}
+
+.nft {
+  width: 100%;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+.absolute {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.preview:hover .absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  height: auto;
+  width: auto;
+  z-index: 2;
+}
+
+.preview:hover:after {
+  content: "";
+  height: 15.2rem;
+  width: 15.2rem;
+  background-color: hsla(178, 100%, 50%, 50%);
+  z-index: 1;
+  position: absolute;
+  border-radius: 0.5rem;
+  left: 0;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: -10px;
+}
+
+.preview:hover + h1 {
+  margin-top: 10px;
+}
+
+h1:hover,
+h1:focus {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+img.eth {
+  margin-right: 0.5rem;
+}
+
+p.eth {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+  margin: 0;
+}
+
+.time {
+  margin-left: auto;
+}
+
+img.time {
+  margin-right: 0.3rem;
+}
+
+p.time {
+  margin: 0;
+}
+
+hr {
+  border-color: hsl(215, 32%, 27%);
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+
+.avatar {
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+}
+
+a {
+  color: white;
+}
+
+a:hover,
+a:focus {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution {
+  padding-top: 0.5rem;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+}
