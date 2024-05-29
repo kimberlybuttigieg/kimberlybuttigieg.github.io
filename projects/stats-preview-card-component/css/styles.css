@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(233, 47%, 7%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.card {
+  width: 14rem;
+  height: 31rem;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.6rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+  z-index: 0;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+}
+
+.header:after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  color: red;
+  background-color: hsla(277, 64%, 61%, 60%);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: -4px;
+}
+
+.textbox {
+  text-align: center;
+  padding: 0.7rem;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+b {
+  color: hsl(277, 64%, 61%);
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 + p {
+  margin-bottom: 1rem;
+}
+
+.grid-item p:first-child {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.grid-item p:last-child {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.grid-item {
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 375px) {
+  .card {
+    width: 40rem;
+    flex-direction: row-reverse;
+    height: 15rem;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .textbox {
+    padding: 2rem;
+    width: 30rem;
+  }
+
+  .header:after {
+    top: 0;
+  }
+
+  .grid {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  h1 + p {
+    margin-bottom: 2rem;
+  }
+
+  h1 + p,
+  h1 {
+    text-align: left;
+  }
+}
