@@ -11,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .background {
@@ -114,4 +115,9 @@ hr {
   font-size: 0.5rem;
   letter-spacing: 0.1rem;
   margin-top: 0.2rem;
+}
+
+a {
+  font-family: sans-serif;
+  margin-top: 0.5rem;
 }
